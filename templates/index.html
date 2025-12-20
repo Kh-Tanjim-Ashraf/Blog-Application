@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog System</title>
-  </head>
-  <body>
-    <main>
-      <h1>Blog System</h1>
+{% extends 'layout.html' %}
+
+{% block main %}
+<h1>Blog System</h1>
       <p>This is the home page.</p>
       <p>Post List | <a href="{% url 'PostApp:postList' %}">Link</a></p>
-    </main>
-  </body>
-</html>
+{% endblock %}
