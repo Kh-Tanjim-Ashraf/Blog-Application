@@ -1,23 +1,20 @@
 {% extends 'layout.html' %}
 
-{% block title %}Post List{% endblock %}
+{% block title %}
+{{ post.title }}
+{% endblock %}
 
 {% block main %}
     <h1>Post List | Home</h1>
       <p>All post list will be shown here!</p>
-      <p>Go back to the homepage | <a href="{% url 'homePage' %}">Link</a></p>
+      <p>Go back to the post list | <a href="{% url 'PostApp:postList' %}">Link</a></p>
     
     <section>
-      {% for post in posts %}
-      <article class="post">
         <h1>
-          <a href="{% url 'PostApp:postDetail' slug=post.slug %}">
             {{ post.title }}
-          </a>
         </h1>
         <p>{{ post.date }}</p>
         <p>{{ post.body }}</p>
       </article>
-      {% endfor %}
     </section>
 {% endblock %}
