@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  color: aquamarine;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.banner {
+  display: block;
+  width: 50rem;
+  height: 30rem;
+}

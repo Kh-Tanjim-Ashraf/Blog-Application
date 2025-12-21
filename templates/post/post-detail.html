@@ -5,11 +5,10 @@
 {% endblock %}
 
 {% block main %}
-    <h1>Post List | Home</h1>
-      <p>All post list will be shown here!</p>
       <p>Go back to the post list | <a href="{% url 'PostApp:postList' %}">Link</a></p>
     
     <section>
+        <img class="banner" src="{{ post.banner.url }}" alt="{{ post.title }}">
         <h1>
             {{ post.title }}
         </h1>
