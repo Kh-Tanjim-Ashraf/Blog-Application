@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homePage, name='homePage'),
     path('post/', include('post.urls', 'app_name')),
+    path('user/', include(('user.urls', 'app_name'), namespace='UserApplication')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

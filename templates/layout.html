@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="{% static 'css/layout.css' %}" />
   </head>
   <body>
+    <p>
+      Register new user |
+      <a href="{% url 'UserApp:registerUser' %}">Link</a>
+    </p>
+    <p>Post Page | <a href="{% url 'PostApp:postList' %}">Link</a></p>
+    <p>Home Page | <a href="{% url 'homePage' %}">Link</a></p>
     <main>{% block main %}{% endblock %}</main>
   </body>
 </html>
