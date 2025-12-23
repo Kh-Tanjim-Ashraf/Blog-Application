@@ -14,6 +14,11 @@
     </p>
     <p>Post Page | <a href="{% url 'PostApp:postList' %}">Link</a></p>
     <p>Home Page | <a href="{% url 'homePage' %}">Link</a></p>
+    <p>User Login | <a href="{% url 'UserApp:loginUser' %}">Link</a></p>
+    <form action="{% url 'UserApp:logoutUser' %}" method="POST">
+      {% csrf_token %}
+      <button type="submit">Logout</button>
+    </form>
     <main>{% block main %}{% endblock %}</main>
   </body>
 </html>
