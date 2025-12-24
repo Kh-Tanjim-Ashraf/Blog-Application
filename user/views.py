@@ -21,10 +21,15 @@ def loginUser (request):
         form = AuthenticationForm(data=request.POST)
         # print("form:", form.__dir__())
         if form.is_valid():
-            print("form:", form.get_user())
+            # print("form:", form.get_user())
             login(request, form.get_user())
+            # print("Next:", request.POST.get('next'))
+            if request.POST.get('next'):
+                return redirect(request.POST.get('next'))
             return redirect('homePage')
     else:
+        # print(dir(request.GET))
+        # print(request.GET)
         form = AuthenticationForm()
     context = {
         "form": form
