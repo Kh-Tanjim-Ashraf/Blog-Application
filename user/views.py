@@ -35,4 +35,4 @@ def loginUser (request):
 def logoutUser (request):
     if request.method == 'POST':
         logout(request)
-    return redirect('homePage')
+        return redirect('homePage')
